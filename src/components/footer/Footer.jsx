@@ -19,7 +19,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <footer className="bg-[#0C1243CC]">
+      <footer className="bg-[#0c1243d9]">
         <div className="mx-auto flex w-10/12 flex-col gap-20 py-16 text-white">
           <div className="grid grid-cols-12 ">
             <div className="col-span-9 flex flex-col justify-between gap-12">

@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Toolbar />
-      <main>{children}</main>
+      <main className="mt-24">{children}</main>
       <Footer />
     </>
   );

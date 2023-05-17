@@ -6,11 +6,12 @@ import { FcMenu } from "react-icons/fc";
 const Toolbar = () => {
   const [Show, setShow] = useState("");
   const location = useLocation();
-  console.log(location);
   return (
     <header className="to-gray-250 fixed left-0 right-0 top-0 z-50 h-[96px] bg-gray-50 bg-gradient-to-r from-gray-200 shadow-sm">
       <div className="mx-auto flex h-full w-10/12 items-center justify-between">
-        <h2 className="text-3xl">Wiser University</h2>
+        <h2 className="text-3xl">
+          <Link to={"/"}>Wiser University</Link>
+        </h2>
         <nav className="hidden lg:flex lg:items-center lg:gap-8">
           <ul className="flex gap-8">
             {navlinks.map((link, index) => {

@@ -5,7 +5,7 @@ const navlinks = [
   },
   {
     name: "Courses",
-    to: "/courses",
+    to: "/course",
   },
   {
     name: "Blog",
