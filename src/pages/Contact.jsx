@@ -23,16 +23,21 @@ const Contact = () => {
   ];
   return (
     <div>
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-12">
         <PageHeader title={"Contact"} image={bannerImg} />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14137.786623297841!2d83.45368345!3d27.641649399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1684311611631!5m2!1sen!2snp"
-          width="100%"
-          height="450"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+
+        <div>
+          <h2 className="mb-12 text-center text-4xl">Find us on map</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14137.786623297841!2d83.45368345!3d27.641649399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1684311611631!5m2!1sen!2snp"
+            width="100%"
+            height="450"
+            allowfullscreen=""
+            title="map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
         <div className="mx-auto w-10/12">
           <h2 className="mb-12 text-4xl">Get in touch</h2>
           <div className=" grid grid-cols-12 gap-8">

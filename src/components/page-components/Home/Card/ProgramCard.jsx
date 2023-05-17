@@ -1,3 +1,4 @@
+import Button from "components/ui/button/Button";
 import React from "react";
 
 const ProgramCard = ({ image, category, title, content }) => {
@@ -17,9 +18,10 @@ const ProgramCard = ({ image, category, title, content }) => {
           {content}
         </p>
         <div>
-          <button className=" flex justify-start rounded-md border border-gray-300 px-4 py-3 text-lg transition duration-300 hover:bg-gray-100 hover:text-blue-600">
-            Read More
-          </button>
+          <Button
+            title="Read More"
+            className={`flex justify-start rounded-md border border-gray-300 px-4 py-3 text-lg transition duration-300 hover:bg-gray-100 hover:text-blue-600`}
+          />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import navlinks from "../navigation/navdata";
 import { Link, useLocation } from "react-router-dom";
 import { FcMenu } from "react-icons/fc";
+import Button from "components/ui/button/Button";
 
 const Toolbar = () => {
   const [Show, setShow] = useState("");
@@ -74,12 +75,12 @@ const Toolbar = () => {
               }
             })}
           </ul>
-          <Link
-            to="/"
-            className="rounded bg-blue-600 px-5 py-3 uppercase text-white transition hover:bg-blue-700"
-          >
-            Apply Now
-          </Link>
+
+          <Button
+            url={"/apply"}
+            title="Apply Now"
+            className={`rounded bg-blue-600 px-5 py-3 uppercase text-white transition hover:bg-blue-700`}
+          />
         </nav>
         <button className="lg:hidden">
           <FcMenu className="text-4xl " />

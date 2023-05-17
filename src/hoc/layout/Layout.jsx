@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
-import Toolbar from "../../components/navigation/Toolbar";
+
+import Toolbar from "components/navigation/Toolbar";
+import Footer from "components/ui/footer/Footer";
 
 const Layout = ({ children }) => {
   return (

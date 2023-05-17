@@ -5,6 +5,7 @@ import "./App.css";
 import Courses from "pages/Courses";
 import Blog from "pages/Blog";
 import Contact from "pages/Contact";
+import ApplyPage from "pages/Apply";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path={"/course"} element={<Courses />} />
           <Route path={"/blog"} element={<Blog />} />
-          <Route path={"/contact"} element={<Contact />} />
+          <Route path={"/contact"} element={<Contact />} />{" "}
+          <Route path={"/apply"} element={<ApplyPage />} />
         </Routes>
       </Layout>
     </div>
