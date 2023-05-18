@@ -4,7 +4,7 @@ const ScholarshipCard = (props) => {
     <>
       {/* Card Start */}
       <div
-        className={`flex cursor-pointer items-center  gap-6 rounded-xl p-5 transition duration-500 hover:-translate-y-2 ${props.className}`}
+        className={`flex w-fit cursor-pointer  items-center gap-6 rounded-xl p-5 px-6 transition duration-500 hover:-translate-y-2 ${props.className}`}
       >
         <div className={`text-6xl ${props.color} rounded-full bg-white p-4`}>
           {props.icon}

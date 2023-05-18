@@ -22,7 +22,24 @@ const navlinks = [
   },
   {
     name: "Page",
-    to: "/page",
+    children: [
+      {
+        name: "Events",
+        to: "/events",
+      },
+      {
+        name: "Events Date",
+        to: "/eventdate",
+      },
+      {
+        name: "Admission",
+        to: "/admission",
+      },
+      {
+        name: "Elements",
+        to: "/blog/elements",
+      },
+    ],
   },
   {
     name: "Contact",

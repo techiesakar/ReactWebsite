@@ -5,11 +5,11 @@ import Footer from "components/ui/footer/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="relative">
       <Toolbar />
-      <main className="mt-24">{children}</main>
+      <main className="absolute  top-0">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

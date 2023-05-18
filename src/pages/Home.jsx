@@ -9,7 +9,7 @@ import RecentNews from "components/page-components/Home/RecentNews";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-24 ">
       <Hero />
       <Scholarship />
       <PopularPrograms />

@@ -1,15 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import navlinks from "../navigation/navdata";
 import { Link, useLocation } from "react-router-dom";
 import { FcMenu } from "react-icons/fc";
 import Button from "components/ui/button/Button";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Toolbar = () => {
   const [Show, setShow] = useState("");
+  const [topFixed, setTopFixed] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  }, []);
+
+  const scroll = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      console.log(windowHeight);
+      if (windowHeight > 240) {
+        setTopFixed(true);
+      } else {
+        setTopFixed(false);
+      }
+    }
+  };
+
   const location = useLocation();
   return (
-    <header className="to-gray-250 fixed left-0 right-0 top-0 z-50 h-[96px] bg-gray-50 bg-gradient-to-r from-gray-200 shadow-sm">
-      <div className="mx-auto flex h-full w-10/12 items-center justify-between">
+    <header
+      className={` ${
+        topFixed
+          ? "fixed -top-[60px] left-0 right-0 translate-y-[60px] duration-300"
+          : "bg-tranparent  scroll_completed relative  duration-300"
+      }  scrolling z-50  h-[108px] py-4 transition-all`}
+    >
+      <div
+        className={`mx-auto flex h-full  w-10/12 items-center justify-between ${
+          topFixed ? "rounded-3xl bg-gray-50 p-6" : ""
+        }`}
+      >
         <h2 className="text-3xl">
           <Link to={"/"}>Wiser University</Link>
         </h2>
@@ -20,12 +52,13 @@ const Toolbar = () => {
                 return (
                   <li
                     key={index}
-                    className="relative cursor-pointer text-lg"
+                    className="relative flex cursor-pointer items-center text-lg"
                     onClick={() => {
                       setShow(link.name);
                     }}
                   >
                     {link.name}
+                    <MdKeyboardArrowDown className="mt-1 text-2xl" />
 
                     <li
                       key={index}
