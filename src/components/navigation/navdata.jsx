@@ -9,6 +9,7 @@ const navlinks = [
   },
   {
     name: "Blog",
+    to: "/Blog",
     children: [
       {
         name: "Blog",
@@ -22,6 +23,7 @@ const navlinks = [
   },
   {
     name: "Page",
+    to: "/Page",
     children: [
       {
         name: "Events",

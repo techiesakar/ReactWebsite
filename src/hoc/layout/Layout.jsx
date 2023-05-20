@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div className="relative">
       <Toolbar />
-      <main className="absolute  top-0">{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </div>
   );
